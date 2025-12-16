@@ -1,0 +1,85 @@
+import { OrbitingCircles } from "../ui/orbiting-circles";
+import Image from "next/image";
+
+export default function MultiplayerCard() {
+  return (
+    <div className="relative flex h-44 w-72 flex-col items-center justify-center overflow-hidden">
+      <OrbitingCircles
+        iconSize={30}
+        radius={60}
+        reverse
+        speed={2}
+        className="grayscale"
+      >
+        <Image
+          src="https://tapback.co/api/avatar/johndoe"
+          width="60"
+          height="60"
+          alt="avatar"
+        />
+        <Image
+          src="https://tapback.co/api/avatar/michael"
+          width="60"
+          height="60"
+          alt="avatar"
+        />
+        <Image
+          src="https://tapback.co/api/avatar/luke"
+          width="60"
+          height="60"
+          alt="avatar"
+        />
+        <Image
+          src="https://tapback.co/api/avatar/janedoe"
+          width="60"
+          height="60"
+          alt="avatar"
+        />
+        <Image
+          src="https://tapback.co/api/avatar/raj"
+          width="60"
+          height="60"
+          alt="avatar"
+        />
+      </OrbitingCircles>
+      <OrbitingCircles
+        iconSize={30}
+        radius={120}
+        reverse
+        speed={2}
+        className="grayscale"
+      >
+        <Image
+          src="https://tapback.co/api/avatar/johndoe"
+          width="60"
+          height="60"
+          alt="avatar"
+        />
+        <Image
+          src="https://tapback.co/api/avatar/michael"
+          width="60"
+          height="60"
+          alt="avatar"
+        />
+        <Image
+          src="https://tapback.co/api/avatar/luke"
+          width="60"
+          height="60"
+          alt="avatar"
+        />
+        <Image
+          src="https://tapback.co/api/avatar/janedoe"
+          width="60"
+          height="60"
+          alt="avatar"
+        />
+        <Image
+          src="https://tapback.co/api/avatar/raj"
+          width="60"
+          height="60"
+          alt="avatar"
+        />
+      </OrbitingCircles>
+    </div>
+  );
+}

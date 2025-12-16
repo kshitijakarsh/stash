@@ -1,16 +1,8 @@
+import MultiplayerCard from "../stash_ui/MultiplayerCard";
 import SearchCard from "../stash_ui/SearchCard";
+import StashCard from "../stash_ui/StashCard";
 
 export default function WhyStash() {
-  const staticStash = {
-    0: [
-      { id: "1", url: "github.com" },
-      { id: "2", url: "docs.react.dev" },
-    ],
-    1: [{ id: "3", url: "vercel.com" }],
-    2: [{ id: "4", url: "tailwindcss.com" }],
-    3: [{ id: "5", url: "openai.com" }],
-  } as const;
-
   return (
     <section className="w-full ">
       <div className="max-w-4xl w-full text-center font-slab flex flex-col justify-center px-4 mt-20 mx-auto">
@@ -59,49 +51,39 @@ export default function WhyStash() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6">
-            <div className="relative">
-              <div className="bg-linear-to-b from-white/20 to-white/40 rounded-2xl h-96 p-6 flex flex-col">
-                <div className="mb-4">
-                  <h2 className="text-2xl font-semibold tracking-tight">
-                    Intelligent Sorting
-                  </h2>
-                  <p className="mt-1 text-sm text-neutral-600 max-w-md">
-                    Your links automatically organize themselves by context,
-                    relevance, and usage.
-                  </p>
-                </div>
+          <div className="flex flex-col gap-6 h-full">
+            {/* Top card */}
+            <div className="relative bg-linear-to-b from-white/20 to-white/40 rounded-2xl p-6 flex flex-col flex-1">
+              <div className="mb-4">
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Intelligent Sorting
+                </h2>
+                <p className="mt-1 text-sm text-neutral-600 max-w-md">
+                  Your links automatically organize themselves by context,
+                  relevance, and usage.
+                </p>
+              </div>
 
-                <div className="grid grid-cols-2 gap-4 flex-1 overflow-hidden">
-                  {[0, 1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="relative rounded-xl border p-3 bg-white/50 backdrop-blur-sm overflow-hidden"
-                    >
-                      <div className="flex flex-col gap-1">
-                        {staticStash[i as 0 | 1 | 2 | 3]
-                          .slice(0, 3)
-                          .map((item) => (
-                            <div
-                              key={item.id}
-                              className="text-xs bg-neutral-100/90 px-2 py-1 rounded-sm truncate"
-                            >
-                              {item.url}
-                            </div>
-                          ))}
-                      </div>
+              <StashCard />
+            </div>
 
-                      {staticStash[i as 0 | 1 | 2 | 3].length > 3 && (
-                        <span className="absolute bottom-2 right-2 text-[10px] text-neutral-500">
-                          +{staticStash[i as 0 | 1 | 2 | 3].length - 3} more
-                        </span>
-                      )}
-                    </div>
-                  ))}
-                </div>
+            {/* Bottom card */}
+            <div className="relative bg-linear-to-b from-white/20 to-white/40 rounded-xl p-6 flex flex-col flex-1">
+              <div className="max-w-md">
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Built for Multiplayer.
+                </h2>
+                <p className="mt-1 text-sm text-neutral-600">
+                  Don't just share. Stash together. Collaborative bookmarking
+                  that keeps your team on the same page.
+                </p>
+              </div>
+
+              {/* Anchor */}
+              <div className="flex justify-end">
+                <MultiplayerCard />
               </div>
             </div>
-            <div className="bg-linear-to-b from-white/20 to-white/40 rounded-xl flex-1" />
           </div>
         </div>
       </div>
