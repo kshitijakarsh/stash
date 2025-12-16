@@ -4,7 +4,7 @@ import StashCard from "../stash_ui/StashCard";
 
 export default function WhyStash() {
   return (
-    <section className="w-full ">
+    <section className="w-full">
       <div className="max-w-4xl w-full text-center font-slab flex flex-col justify-center px-4 mt-20 mx-auto">
         <h1 className="text-4xl leading-tight">
           Bookmarks are where links go to die

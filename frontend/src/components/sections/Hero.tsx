@@ -3,8 +3,8 @@ import HeroCenterComponent from "../HeroCenterComponent";
 
 export default function HeroSection() {
   return (
-    <div className="flex justify-center mt-10 ">
-      <div className="w-full max-w-7xl h-180 rounded-xl shadow-sm bg-linear-to-b from-[#D9D9D9]/40 to-[#737373]/10">
+    <div className="flex justify-center mt-10">
+      <div className="w-full max-w-7xl h-180 rounded-xl shadow-sm bg-linear-to-b from-[#D9D9D9]/40 to-[#737373]/10 border-b border-neutral-700">
         <div className="mx-auto mt-6 max-w-4xl text-center font-slab">
           <h1 className="text-4xl leading-tight">
             Turn Digital Chaos into Clarity with Stash
